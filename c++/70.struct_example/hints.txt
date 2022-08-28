@@ -1,0 +1,26 @@
+1. rand() and srand
+2. struct array
+3. struct as input of a function
+
+1. rand()/srand(): produce a value in range 0~ max_num, everytime it run, the value is going to be the same
+           so here has to use seed: srand(): srand(1), which means:
+		   srand(i);
+		   int number = rand(); //when i is changed, then number value will be changed when run the code differently, so 
+		   // using time can be as the input.
+		   so:  
+		   srand((unsigned int)time(NULL));
+		   int number = rand();
+
+		   but if i want the rand value in 0~100 ?
+		   int rd = rand();
+		   x = (rd * 100) / RAND_MAX; // range will be in [0, 100]
+2. struct:
+   inside struct, there is still another struct, how to access the inside struct?
+   pointer: ->
+   value: .
+   struct as the input of function parameter, when call the function, can simply use the array name if it is a struct array
+   a. function define:
+   void printinfo(struct Teacher tArray[], int len)
+   b. call the function:
+   allocateSpace(tArray, len);
+3. string can use += to add new string behind
