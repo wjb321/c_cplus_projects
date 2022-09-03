@@ -1,10 +1,7 @@
 #include "modifyPersons.h"
-#include "structs.h"
-#include "iostream"
-using namespace std;
 #include "string"
 #include "isExist.h"
-
+#include "iostream"
 
 void modifyPerson(adressbooks * adbs)  // pointer as a input, then any function inside wont use
 // pointer anymore., otherwise it will be ptr **

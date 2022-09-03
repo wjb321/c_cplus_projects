@@ -1,9 +1,8 @@
 #include "isExist.h"
-#include "structs.h"
-#include "iostream"
-using namespace std;
-#include "string"
 
+
+#include "string"
+#include "iostream"
 int isExist(adressbooks * adbs, string name)
 {
 	for (int i = 0; i < adbs->P_Size; i++)

@@ -1,7 +1,6 @@
 #include "deletePersons.h"
-#include "structs.h"
-#include "iostream"
-using namespace std;
+
+
 #include "string"
 #include "isExist.h"
 

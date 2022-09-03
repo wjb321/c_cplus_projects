@@ -1,7 +1,6 @@
 #include "findPersons.h"
-#include<iostream>
-using namespace std;
-#include "structs.h"
+
+
 #include <string>
 #include "isExist.h"
 

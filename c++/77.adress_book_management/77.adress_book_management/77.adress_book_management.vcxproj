@@ -78,18 +78,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="77.contactbook_management.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="addPersons.cpp" />
+    <ClCompile Include="clearPersonslist.cpp" />
     <ClCompile Include="deletePersons.cpp" />
     <ClCompile Include="findPersons.cpp" />
     <ClCompile Include="isExist.cpp" />
     <ClCompile Include="modifyPersons.cpp" />
+    <ClCompile Include="showInterface.cpp" />
+    <ClCompile Include="showPersonsList.cpp" />
     <ClCompile Include="structs.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="addPersons.h" />
+    <ClInclude Include="clearPersonslist.h" />
     <ClInclude Include="deletePersons.h" />
     <ClInclude Include="findPersons.h" />
     <ClInclude Include="isExist.h" />
     <ClInclude Include="modifyPersons.h" />
+    <ClInclude Include="showInterface.h" />
+    <ClInclude Include="showPersonsList.h" />
     <ClInclude Include="structs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

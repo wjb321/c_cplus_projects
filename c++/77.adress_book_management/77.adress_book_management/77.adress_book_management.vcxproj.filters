@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="77.contactbook_management.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="findPersons.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -31,6 +28,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="modifyPersons.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="addPersons.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="showInterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="showPersonsList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="clearPersonslist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,6 +60,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="modifyPersons.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="addPersons.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="showInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="showPersonsList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="clearPersonslist.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
