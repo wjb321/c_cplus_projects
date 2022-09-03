@@ -79,6 +79,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="77.contactbook_management.cpp" />
+    <ClCompile Include="deletePersons.cpp" />
+    <ClCompile Include="findPersons.cpp" />
+    <ClCompile Include="isExist.cpp" />
+    <ClCompile Include="modifyPersons.cpp" />
+    <ClCompile Include="structs.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deletePersons.h" />
+    <ClInclude Include="findPersons.h" />
+    <ClInclude Include="isExist.h" />
+    <ClInclude Include="modifyPersons.h" />
+    <ClInclude Include="structs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

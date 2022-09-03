@@ -18,5 +18,37 @@
     <ClCompile Include="77.contactbook_management.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="findPersons.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="isExist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="structs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="deletePersons.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="modifyPersons.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="findPersons.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="isExist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="structs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="deletePersons.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="modifyPersons.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
