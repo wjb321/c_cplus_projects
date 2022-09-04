@@ -1,0 +1,21 @@
+// constructor and destructor
+//if user wont write these two functions, then the system will create the constructor and destructor
+// constuctor: 创建对象时为对象的成员属性赋值，构造函数由编译器自动调用，无需手动调用
+//             没有返回值，也不用void， 函数名和类名相同。构造函数可以有参数，所以可以有参数，所以可以发生重载。
+// destructor:before user is destoried, system call this automatically , do some clearing job
+//            no return, no void
+//            ~ is the flag
+
+
+
+构造函数的分类：
+1. 有参构造和无参构造:
+   系统提供无参构造函数
+
+2. (类型分)普通构造和拷贝构造
+
+调用默认构造函数的时候不要用小括号： Person p1; 
+比如用成 Person p1(); 编译器会认为是这是一个函数的声明， 类似 void func(); 是一个返回void 的函数类型那么无参构造函数如果
+带了括号就会被认为是一个函数声明
+
+不要用拷贝构造函数对匿名对象进行初始化，因为编译器会认为这是一个对象的声明
