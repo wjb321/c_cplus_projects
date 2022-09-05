@@ -28,11 +28,19 @@ Building operator+(Building &bui_1, Building &bui_2)
 	temp.m_B = bui_1.m_B + bui_2.m_B;
 	return temp;
 }
+//3. 加常数类型重载
+Building operator+(Building &bui_1, int num)
+{
+	Building temp;
+	temp.m_A = bui_1.m_A + num;
+	temp.m_B = bui_1.m_B + num;
+	return temp;
+}
 void test01()
 {  
 	Building bui;
 	bui.m_A = 10;
-	bui.m_B = 10;
+	bui.m_B = 11;
 
 	Building bui_1;
 	bui_1.m_A = 12;
@@ -49,6 +57,13 @@ void test01()
 	Building bui_2 = bui + bui_1;
 	cout << "bui_2.m_a = " << bui_2.m_A << endl;
 	cout << "bui_2.m_b = " << bui_2.m_B << endl;
+
+	//3. 运算符重载可以发生函数重载
+	Building bui_4 = bui + 10;
+
+	cout << "bui_4.m_a = " << bui_4.m_A << endl;
+	cout << "bui_4.m_b = " << bui_4.m_B << endl;
+
 
 }
 
