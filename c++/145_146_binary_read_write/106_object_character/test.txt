@@ -1,0 +1,3 @@
+name: wang
+sex: man
+age: 18
