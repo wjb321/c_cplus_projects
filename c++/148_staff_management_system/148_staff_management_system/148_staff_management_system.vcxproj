@@ -65,10 +65,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="employee.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="workermanager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="employee.h" />
+    <ClInclude Include="worker.h" />
     <ClInclude Include="workerManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
