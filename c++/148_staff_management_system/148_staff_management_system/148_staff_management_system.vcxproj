@@ -65,12 +65,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Boss.cpp" />
     <ClCompile Include="employee.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="manager.cpp" />
     <ClCompile Include="workermanager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Boss.h" />
     <ClInclude Include="employee.h" />
+    <ClInclude Include="manager.h" />
     <ClInclude Include="worker.h" />
     <ClInclude Include="workerManager.h" />
   </ItemGroup>

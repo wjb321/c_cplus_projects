@@ -3,10 +3,19 @@ using namespace std;
 #include "workermanager.h"
 #include "worker.h"
 #include "employee.h"
+#include "Boss.h"
 int main()
 {   
 	Worker * worker = NULL;
 	worker = new Employee(1, "wang", 123);
+	worker->showInfo();
+	delete worker;
+
+	worker = new Manager(1, "xujiao", 321);
+	worker->showInfo();
+	delete worker;
+
+	worker= new Boss(2, "who knows", 32112);
 	worker->showInfo();
 	workermanager wm;
 

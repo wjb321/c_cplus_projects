@@ -11,9 +11,9 @@ Employee::Employee(int id, string name, int depID)
 void Employee::showInfo()
 {
 	cout << "staff ID is " << this->m_id
-		<< "\t staff name: " << this->m_name
-		<< "\t staff position: " << this->getDepartName()
-		<< "\t position duty: finish the task" << endl;
+		<< "\tstaff name: " << this->m_name
+		<< "\tstaff position: " << this->getDepartName()
+		<< "\tposition duty: finish the task" << endl;
 }
 
 string  Employee:: getDepartName()
