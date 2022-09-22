@@ -4,6 +4,7 @@
 #include "Boss.h"
 #include "worker.h"
 
+
 workermanager::workermanager()
 {
 	//initialize the attribution
@@ -91,18 +92,37 @@ void workermanager::add_Emp()
 		//update worker numbers
 		this->m_EmpNum = newSize;
 
+		//successfully added, then should be stored in the files, because if do not do so then 
+		//when the system restarts, there is going to be nothing inside.
+
 		cout << "successfully add the " << addNum << "employees" << endl;
+		this->infoSave();
 	}
 	else
 	{
 		cout << "sorry, please input again" << endl;
 	}
+	system("pause");
+	system("cls");
 }
 
 void workermanager::Exitsystem()
 {
 	cout << "welcome next time" << endl;
 	system("pause");
+}
+
+void workermanager::infoSave()
+{
+	ofstream ofs;
+	ofs.open(EMPLOYEEBOOK, ios::out);
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		ofs << this->m_EmpArray[i]->m_id << " "
+			<< this->m_EmpArray[i]->m_name << " "
+			<< this->m_EmpArray[i]->m_depID << endl;
+	}
+	ofs.close();
 }
 
 workermanager::~workermanager()

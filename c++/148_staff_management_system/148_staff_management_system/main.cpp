@@ -19,7 +19,7 @@ int main()
 	worker->showInfo();
 	workermanager wm;
 
-	/*int decision = 0;
+	int decision = 0;
 
 	while (true)
 	{
@@ -33,6 +33,7 @@ int main()
 			wm.Exitsystem();
 			break;
 		case 1:
+			wm.add_Emp();
 			break;
 		case 2:
 			break;
@@ -50,7 +51,7 @@ int main()
 			system("cls");
 			break;
 		}
-	}*/
+	}
 	system("pause");
 	return 0;
 }
