@@ -38,6 +38,26 @@ workermanager::workermanager()
 		return;
 	}
 
+	//3. when file exist, and has some staff input
+	int num = this->get_EmpNum();
+	cout << "the employee num is:" << num << endl;
+	this->get_EmpNum();
+
+}
+
+int workermanager::get_EmpNum()
+{
+	ifstream ifs;
+	ifs.open(EMPLOYEEBOOK, ios::in);
+	int id;
+	string name;
+	int dID;
+	int num = 0;
+	while (ifs >> id && ifs >> name && ifs >> dID)
+	{
+		num++;
+	}
+	return num;
 }
 
 void workermanager::show_menu()

@@ -14,6 +14,9 @@ public:
 	void Exitsystem();
 	void add_Emp();
 	void infoSave();
+	
+	// get the num of people in file
+	int get_EmpNum();
 
 	//note number of workers
 	int m_EmpNum;
