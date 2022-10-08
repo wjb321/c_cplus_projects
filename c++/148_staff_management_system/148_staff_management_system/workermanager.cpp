@@ -25,19 +25,32 @@ workermanager::workermanager()
 
 	}
 
+	//2. file exist, but it is empty
+	char ch;
+	ifs >> ch;
+	if (ifs.eof())
+	{
+		cout << "file is empty" << endl;
+		this->m_EmpArray = NULL;
+		this->m_EmpNum = 0;
+		this->m_fileEmpty = true;
+		ifs.close();
+		return;
+	}
+
 }
 
 void workermanager::show_menu()
 {
 	cout << "**********************************************" << endl;
 	cout << "***** welcome to staff management system *****" << endl;
-	cout << "********     1. exit staff system     ********" << endl;
-	cout << "********     2. add   new   staff     ********" << endl;
-	cout << "********     3. delete quit staff     ********" << endl;
-	cout << "********     4. modify staff info     ********" << endl;
-	cout << "********     5. search staff info     ********" << endl;
-	cout << "********     6. sort staffby  num     ********" << endl;
-	cout << "********     7. clear all   docum     ********" << endl;
+	cout << "********     0. exit staff system     ********" << endl;
+	cout << "********     1. add   new   staff     ********" << endl;
+	cout << "********     2. delete quit staff     ********" << endl;
+	cout << "********     3. modify staff info     ********" << endl;
+	cout << "********     4. search staff info     ********" << endl;
+	cout << "********     5. sort staffby  num     ********" << endl;
+	cout << "********     6. clear all   docum     ********" << endl;
 	cout << "**********************************************" << endl;
 }
 
@@ -104,6 +117,8 @@ void workermanager::add_Emp()
 		//update worker numbers
 		this->m_EmpNum = newSize;
 
+		//when the file is not empty, then the flag should be changed
+		this->m_fileEmpty = false;
 		//successfully added, then should be stored in the files, because if do not do so then 
 		//when the system restarts, there is going to be nothing inside.
 

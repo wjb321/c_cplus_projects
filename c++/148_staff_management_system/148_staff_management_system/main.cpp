@@ -118,17 +118,17 @@ int main()
 	for (int j = 0; j< sizeof(arr1[i]) / sizeof(int); j++)
 		printf("arr1[%d][%d] is %d\r\n", i, j, arr1[i][j]);
 */
-	Worker * worker = NULL;
-	worker = new Employee(1, "wang", 123);
-	worker->showInfo();
-	delete worker;
+	//Worker * worker = NULL;
+	//worker = new Employee(1, "wang", 123);
+	//worker->showInfo();
+	//delete worker;
 
-	worker = new Manager(1, "xujiao", 321);
-	worker->showInfo();
-	delete worker;
+	//worker = new Manager(1, "xujiao", 321);
+	//worker->showInfo();
+	//delete worker;
 
-	worker= new Boss(2, "who knows", 32112);
-	worker->showInfo();
+	//worker= new Boss(2, "who knows", 32112);
+	//worker->showInfo();
 	workermanager wm;
 
 	int decision = 0;
