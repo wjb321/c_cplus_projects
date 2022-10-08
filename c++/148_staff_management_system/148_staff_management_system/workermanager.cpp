@@ -4,7 +4,6 @@
 #include "Boss.h"
 #include "worker.h"
 
-
 workermanager::workermanager()
 {
 	//initialize the attribution
@@ -12,6 +11,19 @@ workermanager::workermanager()
 
 	this->m_EmpArray = NULL;
 
+	ifstream ifs;
+	//1. file does not exist
+	ifs.open(EMPLOYEEBOOK, ios::in);
+	if (!ifs.is_open())
+	{
+		cout << "file does not exist" << endl;
+		this->m_EmpNum = 0;
+		this->m_EmpArray = NULL;
+		this->m_fileEmpty = true;
+		ifs.close();
+		return;
+
+	}
 
 }
 

@@ -3,6 +3,7 @@
 #include "worker.h"
 using namespace std;
 #include <fstream>
+
 #define EMPLOYEEBOOK "employBooks.txt"
 class workermanager
 {
@@ -17,6 +18,7 @@ public:
 	//note number of workers
 	int m_EmpNum;
 	Worker ** m_EmpArray;
+	int m_fileEmpty;
 
 	~workermanager();
 };

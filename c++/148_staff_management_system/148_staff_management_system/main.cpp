@@ -83,7 +83,7 @@ int main()
 	int arr1[ROW][COLUMN + 1] = { 0 };
     #endif
 
-    #if 1
+    #if 0
 
 
 		int a[5][5] = { { 1, 2 }, { 3, 4, 5 }, { 6 }, { 7 }, { 0, 8 } };
@@ -118,7 +118,7 @@ int main()
 	for (int j = 0; j< sizeof(arr1[i]) / sizeof(int); j++)
 		printf("arr1[%d][%d] is %d\r\n", i, j, arr1[i][j]);
 */
-	/*Worker * worker = NULL;
+	Worker * worker = NULL;
 	worker = new Employee(1, "wang", 123);
 	worker->showInfo();
 	delete worker;
@@ -163,7 +163,7 @@ int main()
 			system("cls");
 			break;
 		}
-	}*/
+	}
 	// 带有 5 个元素的整型数组
 	//int balance[5] = { 1000, 2, 3, 17, 50 };
 	//double avg;
