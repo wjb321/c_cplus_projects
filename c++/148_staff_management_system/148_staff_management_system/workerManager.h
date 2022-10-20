@@ -19,6 +19,9 @@ public:
 	int get_EmpNum();
 
 	void init_Emp();
+	
+	// show staff function
+	void show_Emp();
 	//note number of workers
 	int m_EmpNum;
 	Worker ** m_EmpArray;

@@ -81,10 +81,11 @@ void workermanager::show_menu()
 	cout << "***** welcome to staff management system *****" << endl;
 	cout << "********     0. exit staff system     ********" << endl;
 	cout << "********     1. add   new   staff     ********" << endl;
-	cout << "********     2. delete quit staff     ********" << endl;
-	cout << "********     3. modify staff info     ********" << endl;
-	cout << "********     4. search staff info     ********" << endl;
-	cout << "********     5. sort staffby  num     ********" << endl;
+	cout << "********     2. show  new   staff     ********" << endl;
+	cout << "********     3. delete quit staff     ********" << endl;
+	cout << "********     4. modify staff info     ********" << endl;
+	cout << "********     5. search staff info     ********" << endl;
+	cout << "********     6. sort staffby  num     ********" << endl;
 	cout << "********     6. clear all   docum     ********" << endl;
 	cout << "**********************************************" << endl;
 }
@@ -215,6 +216,24 @@ void workermanager::init_Emp()
 		
 	}
 	ifs.close(); // close the file after  
+}
+void workermanager::show_Emp()
+{
+	if (this->m_fileEmpty)
+	{
+		cout << "the file is not exist or empty " << endl;
+
+	}
+	else
+	{
+		for (int i = 0; i < m_EmpNum; i++)
+		{   // use phorinorsm call function terminal
+			this->m_EmpArray[i]->showInfo();
+		}
+	}
+	//clear the screen
+	system("pause");
+	system("cls");
 }
 workermanager::~workermanager()
 {
