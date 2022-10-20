@@ -18,6 +18,7 @@ public:
 	// get the num of people in file
 	int get_EmpNum();
 
+	void init_Emp();
 	//note number of workers
 	int m_EmpNum;
 	Worker ** m_EmpArray;

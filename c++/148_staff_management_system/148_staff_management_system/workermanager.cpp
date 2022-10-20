@@ -40,8 +40,23 @@ workermanager::workermanager()
 
 	//3. when file exist, and has some staff input
 	int num = this->get_EmpNum();
-	cout << "the employee num is:" << num << endl;
-	this->get_EmpNum();
+
+	//here is the test code
+	/*cout << "the employee num is:" << num << endl;
+	this->m_EmpNum = num;*/
+	// allocate spaces
+	this->m_EmpArray = new Worker *[this->m_EmpNum];
+	//store the data into array
+	this->init_Emp();
+	
+	//here are the test code
+	//for (int i = 0; i < this->m_EmpNum; i++)
+	//{
+	//	cout << "employee number: " << this->m_EmpArray[i]->m_id 
+	//		<< " name: " << this->m_EmpArray[i]->m_name 
+	//		<< " department ID " << this->m_EmpArray[i]->m_depID  << endl;;
+
+	//}
 
 }
 
@@ -172,6 +187,35 @@ void workermanager::infoSave()
 	ofs.close();
 }
 
+void workermanager::init_Emp()
+{
+	ifstream ifs;
+	ifs.open(EMPLOYEEBOOK, ios::in);
+	int id;
+	string name;
+	int dID;
+	int index = 0;
+	while (ifs >> id && ifs >> name && ifs >> dID)
+	{
+		Worker * worker = NULL;
+		if (dID == 1)
+		{
+			worker = new Employee(id, name, dID);
+		}
+		else if (dID == 2)
+		{
+			worker = new Manager(id, name, dID);
+		}
+		else
+		{
+			worker = new Boss(id, name, dID);
+		}
+		this->m_EmpArray[index] = worker;
+		index++;
+		
+	}
+	ifs.close(); // close the file after  
+}
 workermanager::~workermanager()
 {
 
