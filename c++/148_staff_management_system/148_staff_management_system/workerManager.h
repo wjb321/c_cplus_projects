@@ -22,6 +22,11 @@ public:
 	
 	// show staff function
 	void show_Emp();
+
+	// delete the employee
+	void Del_Emp();
+	int IsExist(int id); // if the employees are not exist, then no need for deleting 
+
 	//note number of workers
 	int m_EmpNum;
 	Worker ** m_EmpArray;

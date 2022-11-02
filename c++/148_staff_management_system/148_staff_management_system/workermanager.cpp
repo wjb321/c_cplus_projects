@@ -86,7 +86,7 @@ void workermanager::show_menu()
 	cout << "********     4. modify staff info     ********" << endl;
 	cout << "********     5. search staff info     ********" << endl;
 	cout << "********     6. sort staffby  num     ********" << endl;
-	cout << "********     6. clear all   docum     ********" << endl;
+	cout << "********     7. clear all   docum     ********" << endl;
 	cout << "**********************************************" << endl;
 }
 
@@ -116,9 +116,9 @@ void workermanager::add_Emp()
 			int id;
 			string name;
 			int dSelete;
-			cout << "please input " << i + 1 << "th" << "new employee number" << endl;
+			cout << "please input " << i + 1 << " th " << "new employee number" << endl;
 			cin >> id;
-			cout << "please input " << i + 1 << "th" << "new employee name" << endl;
+			cout << "please input " << i + 1 << " th " << "new employee name" << endl;
 			cin >> name;
 			cout << "please selete the position " << endl;
 			cout << "1. common worker" << endl;
@@ -235,7 +235,33 @@ void workermanager::show_Emp()
 	system("pause");
 	system("cls");
 }
-workermanager::~workermanager()
+
+void workermanager::Del_Emp()
 {
 
+}
+
+int workermanager::IsExist(int id)
+{
+	int index = -1;
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		if (this->m_EmpArray[i]->m_id == id)
+		{
+			index = i;
+			break;
+		}
+	}
+	return index;
+}
+
+workermanager::~workermanager()
+{  
+	// release the data in the stack
+	// manually open and manually release
+	if (this->m_EmpArray != NULL)
+	{
+		delete[] this->m_EmpArray;
+		this->m_EmpArray = NULL;
+	}
 }

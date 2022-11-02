@@ -72,3 +72,12 @@ int main(void)
         getch(); 
         return 0; 
 }
+
+
+
+
+2.11.22
+a. every time when running the code, the info stored in the .txt can not be read again, it should be 
+   a bug in the code, should check later. and the case 3 test part can work only when write new info 
+   into the file, otherwise it does not work.
+

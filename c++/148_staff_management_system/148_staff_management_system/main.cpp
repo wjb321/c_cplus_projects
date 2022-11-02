@@ -148,10 +148,22 @@ int main()
 			wm.add_Emp();
 			break;
 		case 2:
-			wm.show_Emp();
+			wm.show_Emp();  // show employee
 			break;
-		case 3:
-			break;
+		case 3: // in the braket it is the test, should be deleted after
+		{
+				  int ret = wm.IsExist(5); // test with
+				  if (ret != -1)
+				  {
+					  cout << "the employees exist" << endl;
+				  }
+				  else
+				  {
+					  cout << "it does not exist" << endl;
+				  }
+				break;
+		}
+
 		case 4:
 			break;
 		case 5:
