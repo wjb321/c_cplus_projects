@@ -238,7 +238,33 @@ void workermanager::show_Emp()
 
 void workermanager::Del_Emp()
 {
-
+	if (this->m_fileEmpty)
+	{
+		cout << "file is empty or the records are empty" << endl;
+	}
+	else
+	{
+		cout << "delete the employees ID: " << endl;
+		int id = 0;
+		cin >> id;
+		int index = this->IsExist(id);
+		if (id != -1)
+		{
+			for (int i = index; i < this->m_EmpNum - 1; i++)
+			{
+				this->m_EmpArray[i] = this->m_EmpArray[i + 1];
+			}
+			this->m_EmpNum--;
+			this->infoSave();
+			cout << "delete success! " << endl;
+		}
+		else
+		{
+			cout << "sorry, can not find this staff" << endl;
+		}
+	}
+	system("pause");
+	system("cls");
 }
 
 int workermanager::IsExist(int id)

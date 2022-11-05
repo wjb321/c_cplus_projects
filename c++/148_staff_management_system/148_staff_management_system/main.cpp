@@ -151,18 +151,20 @@ int main()
 			wm.show_Emp();  // show employee
 			break;
 		case 3: // in the braket it is the test, should be deleted after
-		{
-				  int ret = wm.IsExist(5); // test with
-				  if (ret != -1)
-				  {
-					  cout << "the employees exist" << endl;
-				  }
-				  else
-				  {
-					  cout << "it does not exist" << endl;
-				  }
-				break;
-		}
+			wm.Del_Emp();
+			break;
+		//{
+		//		  int ret = wm.IsExist(5); // test with
+		//		  if (ret != -1)
+		//		  {
+		//			  cout << "the employees exist" << endl;
+		//		  }
+		//		  else
+		//		  {
+		//			  cout << "it does not exist" << endl;
+		//		  }
+		//		break;
+		//}
 
 		case 4:
 			break;
