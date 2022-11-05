@@ -25,6 +25,8 @@ public:
 
 	// delete the employee
 	void Del_Emp();
+
+	void Mod_Emp();
 	int IsExist(int id); // if the employees are not exist, then no need for deleting 
 
 	//note number of workers

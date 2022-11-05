@@ -281,6 +281,69 @@ int workermanager::IsExist(int id)
 	return index;
 }
 
+void workermanager::Mod_Emp()
+{
+	if (this->m_fileEmpty)
+	{
+		cout << "file does not exist, or it is empty" << endl;
+	}
+	else
+	{
+		cout << "input the number that you want to modify: " << endl;
+		int id;
+		cin >> id;
+		int ret = this->IsExist(id);
+		if (ret != -1)
+		{
+			// this id is found
+			delete this->m_EmpArray[ret];
+
+			int newID = 0;
+			string newName = " ";
+			int dSelet = 0;
+			cout << "look for: " << id << " staff please input the new id: " << endl;
+			cin >> newID;
+
+			cout << "please input the name:  " << endl;
+			cin >> newName;
+
+			cout << "please input new position : " << endl;
+			cout << "1, staff " << endl;
+			cout << "2, manager " << endl;
+			cout << "3, boss " << endl;
+			cin >> dSelet;
+
+			Worker * worker = NULL;
+			switch (dSelet)
+			{
+			case 1:
+				worker = new Employee(newID, newName, dSelet);
+				break;
+			case 2:
+				worker = new Manager(newID, newName, dSelet);
+				break;
+			case 3:
+				worker = new Boss(newID, newName, dSelet);
+				break;
+			default:
+				break;
+			}
+			// update the data into array
+			this->m_EmpArray[ret] = worker;
+
+			cout << "modify success!" << endl;
+            
+			this->infoSave();
+		}
+		else
+		{
+			cout << "sorry there is no this person! " << endl;
+		}
+		system("pause");
+		system("cls");
+	}
+}
+
 workermanager::~workermanager()
 {  
 	// release the data in the stack
