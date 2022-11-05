@@ -267,6 +267,67 @@ void workermanager::Del_Emp()
 	system("cls");
 }
 
+void workermanager::Find_Emp()
+{
+	if (this->m_fileEmpty)
+	{
+		cout << "file does not exist or report is empty" << endl;
+	}
+	else
+	{
+		cout << "please input the way for selection" << endl;
+		cout << "1. select by ID " << endl;
+		cout << "2. select by name " << endl;
+		int select = 0; 
+		cin >> select;
+		if (select == 1)
+		{
+			int id;
+			cout << "please input the member ID: " << endl;
+			cin >> id;
+			int ret = IsExist(id);
+			if (ret != -1)
+			{
+				cout << "found this staff" << endl;
+				this->m_EmpArray[ret]->showInfo();
+
+			}
+			else
+			{
+				cout << "sorry, no this person! " << endl;
+			}
+		}
+		else if (select == 2)
+		{
+			string name;
+			cout << "please input the name: " << endl;
+			cin >> name;
+
+			// a flag for testing if it is found
+			bool flag = false;
+			for (int i = 0; i < m_EmpNum; i++)
+			{
+				if (this->m_EmpArray[i]->m_name == name)
+				{
+					cout << "success, id is: " 
+						<< this->m_EmpArray[i]->m_id  
+						<< "staff info is:" << endl;
+					flag = true;
+					this->m_EmpArray[i]->showInfo();
+				}
+				if (flag == false)
+				{
+					cout << "sorry, there is no this name" << endl;
+				}
+		
+			}
+		}
+		else
+			cout << "input error, please input it again: " << endl;
+	}
+	system("pause");
+	system("cls");
+}
 int workermanager::IsExist(int id)
 {
 	int index = -1;

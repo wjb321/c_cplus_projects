@@ -29,6 +29,7 @@ public:
 	void Mod_Emp();
 	int IsExist(int id); // if the employees are not exist, then no need for deleting 
 
+	void Find_Emp();
 	//note number of workers
 	int m_EmpNum;
 	Worker ** m_EmpArray;

@@ -82,5 +82,8 @@ a. every time when running the code, the info stored in the .txt can not be read
    into the file, otherwise it does not work.
 
 5.11.22
-a. realize the function of delete staff party in case 3.
+a. realize the function of delete staff party in case 4.
+b. everytime after deleting the debug code, the file should be reset again, otherwise there are errors,
+   please test it.
+c. add search function in case 5
 
