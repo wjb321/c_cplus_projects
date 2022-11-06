@@ -9,10 +9,10 @@ Manager::Manager(int id, string name, int mID)
 
 void Manager::showInfo()
 {
-	cout << "manager ID is " << this->m_id
-		<< "\tmanager name: " << this->m_name
+	cout << "manager        ID:" << this->m_id
+		<< "\tmanager     name: " << this->m_name
 		<< "\tmanager position: " << this->getDepartName()
-		<< "\tmanager duty: finish the job from manager" << endl;
+		<< "\tmanager     duty: finish the job from manager" << endl;
 }
 
 

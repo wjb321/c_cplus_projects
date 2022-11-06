@@ -87,3 +87,6 @@ b. everytime after deleting the debug code, the file should be reset again, othe
    please test it.
 c. add search function in case 5
 
+5.11.22
+a. sort the id staff
+b. clear the file when running the case7, finish the project!

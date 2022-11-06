@@ -9,10 +9,10 @@ Boss::Boss(int id, string name, int mID)
 
 void Boss::showInfo()
 {
-	cout << "Boss ID is " << this->m_id
-		<< "\tBoss name: " << this->m_name
+	cout << " Boss       ID:" << this->m_id
+		<< "\tBoss     name: " << this->m_name
 		<< "\tBoss position: " << this->getDepartName()
-		<< "\tBoss duty: manage the whole company" << endl;
+		<< "\tBoss     duty: manage the whole company" << endl;
 }
 
 

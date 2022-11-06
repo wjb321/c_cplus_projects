@@ -404,7 +404,85 @@ void workermanager::Mod_Emp()
 		system("cls");
 	}
 }
+void workermanager::Sort_Emp()
+{
+	if (this->m_fileEmpty)
+	{
+		cout << "file does not exist or records are empty " << endl;
+		system("pause");
+		system("cls");
+	}
+	else
+	{
+		cout << "please select sort order: ascending or descending ?"<<endl;
+		cout << "1, ascending by ID " << endl;
+		cout << "2, descending by using ID" << endl;
 
+		int select = 0;
+		cin >> select;
+		for (int i = 0; i < m_EmpNum; i++)
+		{
+			int MinOrMax = i;
+			for (int j = i + 1; j < this->m_EmpNum; j++)
+			{
+				if (select == 1) //asceding
+				{
+					if (this->m_EmpArray[MinOrMax]->m_id > this->m_EmpArray[j]->m_id)
+					{
+						MinOrMax = j;
+					}
+				}
+				else // descending
+				{
+					if (this->m_EmpArray[MinOrMax]->m_id < this->m_EmpArray[j]->m_id)
+					{
+						MinOrMax = j;
+					}
+				}
+			}
+			// judge the value in the begin is the max or min value, if not just exchange the data
+			if (i != MinOrMax)
+			{
+				Worker * temp = this->m_EmpArray[i];
+				this->m_EmpArray[i] = this->m_EmpArray[MinOrMax];
+				this->m_EmpArray[MinOrMax] = temp;
+			}
+		}
+		cout << "sorting is success, the sorting result is: " << endl;
+		this->infoSave();
+		this->show_Emp(); // show all the staff
+	}
+}
+void workermanager::Clean_File()
+{
+	cout << "confirm delete this file? " << endl;
+	cout << "1. sure! " << endl;
+	cout << "2. return! " << endl;
+	int select = 0;
+	cin >> select;
+	if (select == 1)
+	{
+		ofstream ofs(EMPLOYEEBOOK, ios::trunc);
+		ofs.close();
+		if (this->m_EmpArray != NULL)
+		{
+			for (int i = 0; i < this->m_EmpNum; i++)
+			{
+				delete this->m_EmpArray[i];
+				this->m_EmpArray[i] = NULL;
+			}
+			//delete the pointer in stack
+			delete[] this->m_EmpArray;
+			this->m_EmpArray = NULL;
+			this->m_EmpNum = 0;
+			this->m_fileEmpty = true;
+
+		}
+		cout << "clear success!!!" << endl;
+	}
+	system("pause");
+	system("cls");
+}
 workermanager::~workermanager()
 {  
 	// release the data in the stack

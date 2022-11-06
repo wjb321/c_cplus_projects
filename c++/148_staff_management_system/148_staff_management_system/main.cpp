@@ -173,8 +173,10 @@ int main()
 			wm.Find_Emp();
 			break;
 		case 6:
+			wm.Sort_Emp();
 			break;
 		case 7:
+			wm.Clean_File();
 			break;
 		default:
 			system("cls");
