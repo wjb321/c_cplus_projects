@@ -11,10 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C31FFF77-0A4D-4704-BC6D-496DE76194FB}</ProjectGuid>
+    <ProjectGuid>{E2DD0C31-2628-4A3F-85CC-F0ED70408406}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
-    <ProjectName>2darray_as_input_and_fullsm_flag</ProjectName>
+    <RootNamespace>My168_templates</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
