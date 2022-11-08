@@ -1,0 +1,3 @@
+matters attention:
+1. automatic type derivation should derive the same type T
+2. template should confirm the type of T then can be used.

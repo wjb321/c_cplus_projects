@@ -21,7 +21,8 @@ void swapDouble(double &a, double &b)
 	b = temp;
 }
 
-template<typename T>
+//template<typename T>// typename can be replaced with class
+template<class T>
 void mySwap(T &a, T &b)
 {
 	T temp = a;
@@ -30,6 +31,26 @@ void mySwap(T &a, T &b)
 	cout << "here is template method " << endl;
 	cout << "a = " << a << endl;
 	cout << "b = " << b << endl;
+}
+template<class T>
+void func()
+{
+	cout << "execuate func()" << endl;
+}
+
+void test01()
+{
+	int a = 100;
+	int b = 20;
+	char c = 'c';
+	mySwap(a, b);
+	//mySwap(a, c); // wrong, the type is not same
+}
+
+void test02()
+{
+	//func(); // error, cause func has no any info to define T in template func(), func() is a template
+	func<int>(); // correct, define the func type then the template can be used.
 }
 
 int main()
@@ -46,4 +67,7 @@ int main()
 
 	//2. show the specific types
 	mySwap<double>(e, f);
+
+	test01();
+	test02();
 }
