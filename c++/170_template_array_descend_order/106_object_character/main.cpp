@@ -24,7 +24,7 @@ void mysort(T arr[], int len)
 				max = j;
    			}
 		}
-		if (max != i)
+		if (max != i) // swap the elements when it is not equal
 		{
 			mySwap(arr[max], arr[i]);
 		}
