@@ -18,6 +18,9 @@
     <ClCompile Include="pointer_array.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Rough_gothrough_C++.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="文本.txt">

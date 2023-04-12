@@ -2,5 +2,4 @@
 一个类中，共有成员函数的调用不一定需要通过类的对象来调用。因为构造函数可以不通过类的对象直接就可以调用
 （In a class, the call of a common member function does not necessarily need to be invoked through the class object. 
 This is because the constructor can be called directly without going through the class object, while other member functions must 
-go through the class object to be called.
-）
+go through the class object to be called.）

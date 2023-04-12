@@ -21,7 +21,7 @@ public:
 	{cout << "i love you" << endl;
 	}
 };
-int main()
+int main1()
 {   
 #if DebugQuestion48
 	char str1[] = "abc";
