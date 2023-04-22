@@ -3,8 +3,6 @@
 #include <typeinfo>
 #include <ctime>
 using namespace std;
-
-
 #define storageClass   0
 #define memberOperator 0
 #define lambdaFunc     0
@@ -44,7 +42,7 @@ int* getRandom();
 void swap(int& x, int& y);
 void printBook(struct Books book);
 void printBook1(struct Books* book);
-int main()
+int main2()
 {
 #if storageClass
 	while (count1--)

@@ -1,0 +1,10 @@
+test question 1
+Constructors with and without arguments, implicit or explicit calls:
+how to initilize the class constructor function:
+1, implicit call constructor function
+   Stock food = Stock("world cabbage", 250, 1.25)
+2, explicit call constructor function
+   Stock food("relax", 50, 2.5)
+
+que 2
+unsigned or signed values

@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="RoughGoC++_classAndObject.cpp" />
     <ClCompile Include="pointer_array.cpp" />
     <ClCompile Include="Rough_gothrough_C++.cpp" />
   </ItemGroup>
