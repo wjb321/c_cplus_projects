@@ -18,5 +18,8 @@
     <ClCompile Include="BinHexOct.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="charIntoHex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
